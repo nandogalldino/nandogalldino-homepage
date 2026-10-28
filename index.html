@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071d35">
+  <meta name="description" content="Nando Galldino apoia profissionais de TI e pré-vendas a conectar conhecimento técnico, valor percebido e decisões melhores — com o método DEVP e IA aplicada ao trabalho.">
+  <title>Nando Galldino | Tecnologia, valor e decisão</title>
+  <style>
+    :root {
+      --navy: #071d35;
+      --navy-2: #102b49;
+      --orange: #f26732;
+      --paper: #f4f2ed;
+      --white: #fff;
+      --ink: #182536;
+      --muted: #627184;
+      --line: rgba(255,255,255,.15);
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .top { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+    .top:before { content: ""; position: absolute; width: 610px; height: 610px; border: 1px solid rgba(255,255,255,.07); border-radius: 50%; right: -70px; top: -185px; box-shadow: 0 0 0 72px rgba(255,255,255,.025), 0 0 0 145px rgba(255,255,255,.018); pointer-events: none; }
+    header { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; padding: 25px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; letter-spacing: .08em; font-size: .82rem; font-weight: 750; }
+    .mark { border: 1px solid rgba(255,255,255,.42); height: 42px; width: 42px; border-radius: 50%; display: grid; place-items: center; font-size: .68rem; letter-spacing: .04em; }
+    nav { display: flex; gap: 28px; font-size: .88rem; color: #c5d0dc; }
+    nav a { text-decoration: none; }
+    nav a:hover { color: var(--white); }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 3px; text-decoration: none; font-weight: 700; transition: transform .18s ease, background .18s ease; }
+    .nav-cta { padding: 11px 16px; background: var(--orange); color: var(--white); font-size: .84rem; }
+    .button:hover, .nav-cta:hover { transform: translateY(-2px); }
+    .hero { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr .8fr; gap: 64px; align-items: center; min-height: 625px; padding: 48px 0 88px; }
+    .eyebrow { display: flex; align-items: center; gap: 11px; text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 750; color: var(--orange); }
+    .eyebrow:before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    h1 { font-size: clamp(3.3rem, 7vw, 6.1rem); line-height: .99; letter-spacing: -.065em; margin: 22px 0; max-width: 760px; }
+    h1 span { color: var(--orange); }
+    .hero-copy { color: #c6d2de; max-width: 690px; font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .button { padding: 14px 19px; background: var(--orange); color: var(--white); }
+    .button.secondary { color: var(--white); background: transparent; border: 1px solid rgba(255,255,255,.35); }
+    .hero-note { color: #99aabc; font-size: .83rem; margin-top: 16px; }
+    .hero-panel { background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.13); padding: 28px; border-left: 3px solid var(--orange); max-width: 390px; justify-self: end; backdrop-filter: blur(3px); }
+    .hero-panel small { color: #93a5b8; letter-spacing: .14em; text-transform: uppercase; font-size: .66rem; font-weight: 750; }
+    .hero-panel h2 { color: var(--white); font-size: 1.55rem; line-height: 1.2; margin: 12px 0; letter-spacing: -.025em; }
+    .hero-panel p { color: #b6c3d0; font-size: .91rem; margin: 0; }
+    .hero-panel .flow { margin-top: 23px; padding-top: 18px; border-top: 1px solid var(--line); color: #e4eaf0; font-size: .73rem; letter-spacing: .09em; text-transform: uppercase; }
+    .section { padding: 94px 0; }
+    .section.light { background: var(--white); }
+    .section.dark { background: var(--navy); color: var(--white); }
+    .section-head { display: grid; grid-template-columns: .75fr 1.25fr; gap: 50px; align-items: start; margin-bottom: 44px; }
+    h2 { font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.08; letter-spacing: -.045em; margin: 10px 0 18px; }
+    .section-head p, .lead { max-width: 670px; color: var(--muted); font-size: 1.03rem; margin: 0; }
+    .dark .section-head p, .dark .lead { color: #b9c6d3; }
+    .label { text-transform: uppercase; letter-spacing: .15em; font-size: .7rem; font-weight: 800; color: var(--orange); }
+    .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .value-card { background: var(--paper); padding: 28px; border-top: 2px solid var(--orange); }
+    .value-card .num { color: var(--orange); font-size: .76rem; letter-spacing: .12em; font-weight: 800; }
+    .value-card h3 { font-size: 1.35rem; margin: 10px 0; letter-spacing: -.025em; }
+    .value-card p { margin: 0; color: var(--muted); }
+    .method { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 42px; border-top: 1px solid var(--line); }
+    .step { padding: 25px 22px 0 0; }
+    .step + .step { padding-left: 22px; border-left: 1px solid var(--line); }
+    .step .num { color: var(--orange); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+    .step h3 { font-size: 1.25rem; margin: 8px 0; }
+    .step p { margin: 0; color: #b9c6d3; font-size: .91rem; }
+    .tracks { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 42px; }
+    .track { padding: 29px; min-height: 285px; background: var(--white); border: 1px solid #e4e5e4; display: flex; flex-direction: column; }
+    .track .tag { color: var(--orange); font-size: .69rem; text-transform: uppercase; letter-spacing: .13em; font-weight: 800; }
+    .track h3 { font-size: 1.42rem; line-height: 1.2; margin: 17px 0 11px; }
+    .track p { color: var(--muted); margin: 0; font-size: .94rem; }
+    .track a { margin-top: auto; padding-top: 22px; text-decoration: none; color: var(--navy); font-weight: 750; font-size: .86rem; }
+    .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; margin-top: 42px; }
+    .offer { background: var(--white); padding: 34px; border: 1px solid #e2e3e2; }
+    .offer.featured { background: var(--navy-2); color: var(--white); border-color: var(--navy-2); }
+    .offer .type { font-size: .7rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; color: var(--orange); }
+    .offer h3 { font-size: 1.55rem; margin: 13px 0 4px; }
+    .price { font-size: 2.45rem; font-weight: 800; letter-spacing: -.05em; margin: 12px 0; }
+    .price small { font-size: .9rem; font-weight: 500; letter-spacing: 0; }
+    .offer p, .offer li { color: var(--muted); font-size: .93rem; }
+    .offer.featured p, .offer.featured li { color: #c4d0dc; }
+    .offer ul { padding-left: 19px; margin: 20px 0 26px; }
+    .offer li { margin: 7px 0; }
+    .offer .button.secondary { color: var(--navy); border-color: #c5cbd0; }
+    .offer.featured .button.secondary { color: var(--white); border-color: rgba(255,255,255,.35); }
+    .pending { font-size: .76rem !important; color: #8e9aaa !important; margin-top: 13px; }
+    .about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: center; }
+    .monogram { min-height: 350px; display: grid; place-items: center; background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+    .monogram:before, .monogram:after { content: ""; position: absolute; width: 280px; height: 280px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; }
+    .monogram:after { width: 210px; height: 210px; }
+    .monogram strong { position: relative; z-index: 1; font-size: 3rem; letter-spacing: -.05em; }
+    .about-copy p { color: var(--muted); }
+    .about-copy .button { margin-top: 12px; }
+    .faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 54px; }
+    details { border-top: 1px solid #d9dddf; padding: 18px 0; }
+    summary { cursor: pointer; font-weight: 750; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+    summary:after { content: "+"; color: var(--orange); font-size: 1.35rem; line-height: 1; }
+    details[open] summary:after { content: "−"; }
+    details p { color: var(--muted); margin: 12px 0 0; }
+    .closing { text-align: center; max-width: 780px; margin: auto; }
+    .closing .actions { justify-content: center; }
+    footer { background: #041528; color: #aebccc; padding: 28px 0; font-size: .8rem; }
+    .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .foot strong { color: var(--white); }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    @media (max-width: 850px) {
+      nav { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 36px; min-height: auto; padding: 70px 0 78px; }
+      .hero-panel { justify-self: start; }
+      .section-head, .about, .faq { grid-template-columns: 1fr; gap: 25px; }
+      .tracks { grid-template-columns: 1fr; }
+      .track { min-height: 230px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(var(--max), calc(100% - 34px)); }
+      header { padding: 17px 0; }
+      .nav-cta { padding: 10px 12px; font-size: .75rem; }
+      .hero { padding-top: 54px; }
+      h1 { font-size: clamp(3.1rem, 14vw, 4.5rem); }
+      .hero-copy { font-size: 1rem; }
+      .section { padding: 70px 0; }
+      .value-grid, .offers, .method { grid-template-columns: 1fr; }
+      .step, .step + .step { padding: 20px 0; border-left: 0; border-top: 1px solid var(--line); }
+      .offer { padding: 26px; }
+      .foot { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="top" id="inicio">
+    <div class="wrap">
+      <header>
+        <a class="brand" href="#inicio" aria-label="Nando Galldino, início">
+          <span class="mark">NG</span>
+          <span>NANDO GALLDINO</span>
+        </a>
+        <nav aria-label="Navegação principal">
+          <a href="#atuacao">Atuação</a>
+          <a href="#devp">DEVP</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#ofertas">Sessões</a>
+        </nav>
+        <a class="nav-cta" href="https://calendly.com/nando-galldino/30min" target="_blank" rel="noopener noreferrer">Conversa gratuita ↗</a>
+      </header>
+      <main class="hero">
+        <div>
+          <div class="eyebrow">Tecnologia · valor · decisão</div>
+          <h1>Conhecimento técnico com <span>mais impacto.</span></h1>
+          <p class="hero-copy">Apoio profissionais de TI e pré-vendas a conectar tecnologia ao contexto do cliente, comunicar valor e tomar decisões melhores — incluindo o uso prático de inteligência artificial.</p>
+          <div class="actions">
+            <a class="button" href="https://calendly.com/nando-galldino/30min" target="_blank" rel="noopener noreferrer">Agendar conversa gratuita ↗</a>
+            <a class="button secondary" href="#atuacao">Conheça as frentes</a>
+          </div>
+          <p class="hero-note">30 minutos para conversar sobre seu desafio e avaliar o próximo passo.</p>
+        </div>
+        <aside class="hero-panel" aria-label="Resumo do método DEVP">
+          <small>Diagnóstico Executivo de Valor Percebido</small>
+          <h2>Sua solução tem valor. O cliente percebe?</h2>
+          <p>O DEVP investiga como transformar conhecimento técnico em uma conversa relevante, diferenciada e orientada à decisão.</p>
+          <div class="flow">Conhecimento técnico → contexto → impacto → decisão</div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <section class="section light" id="atuacao">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="label">Como posso ajudar</div>
+          <h2>Três frentes. Um eixo comum.</h2>
+        </div>
+        <p>O trabalho parte dos desafios reais de quem atua com tecnologia: explicar soluções complexas, influenciar decisões e usar novas ferramentas com propósito.</p>
+      </div>
+      <div class="tracks">
+        <article class="track">
+          <span class="tag">01 · Método</span>
+          <h3>Diagnóstico Executivo de Valor Percebido</h3>
+          <p>Entenda onde o valor da sua solução se perde e como aproximar capacidade técnica, problema do cliente e critérios de decisão.</p>
+          <a href="#devp">Conheça o DEVP ↓</a>
+        </article>
+        <article class="track">
+          <span class="tag">02 · Desenvolvimento</span>
+          <h3>Orientação para TI e pré-vendas</h3>
+          <p>Trabalhe posicionamento, comunicação consultiva e influência em conversas técnicas e executivas.</p>
+          <a href="#ofertas">Ver formatos de sessão ↓</a>
+        </article>
+        <article class="track">
+          <span class="tag">03 · Aplicação</span>
+          <h3>Inteligência artificial no trabalho</h3>
+          <p>Explore como incorporar IA a atividades profissionais, com casos de uso ligados ao contexto e aos objetivos do trabalho.</p>
+          <a href="#ofertas">Conversar sobre seu desafio ↓</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="devp">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="label">Precisão antes da persuasão</div>
+          <h2>O DEVP torna visível a distância entre apresentar e ser percebido.</h2>
+        </div>
+        <p>Profissionais experientes dominam tecnologia, produto e arquitetura. Ainda assim, diferenciais podem desaparecer quando a conversa não conecta capacidade técnica, contexto do cliente e consequência para o negócio.</p>
+      </div>
+      <div class="value-grid">
+        <article class="value-card">
+          <span class="num">O QUE VOCÊ APRESENTA</span>
+          <h3>Capacidades da solução</h3>
+          <p>Arquitetura, funcionalidades, integrações, desempenho e precisão técnica.</p>
+        </article>
+        <article class="value-card">
+          <span class="num">O QUE O CLIENTE PRECISA PERCEBER</span>
+          <h3>Critérios para decidir</h3>
+          <p>Relevância, impactos concretos, diferenças que importam e argumentos para defender a escolha.</p>
+        </article>
+      </div>
+      <div class="method" aria-label="Etapas do método DEVP">
+        <article class="step"><span class="num">01 / CONTEXTO</span><h3>Compreender</h3><p>Ler o cenário, os atores, os problemas e os critérios que moldam a decisão.</p></article>
+        <article class="step"><span class="num">02 / MENSAGEM</span><h3>Traduzir</h3><p>Conectar capacidades técnicas a impactos relevantes para o cliente.</p></article>
+        <article class="step"><span class="num">03 / DECISÃO</span><h3>Diferenciar</h3><p>Evidenciar relevância e comparar alternativas com critérios claros.</p></article>
+        <article class="step"><span class="num">04 / AÇÃO</span><h3>Evoluir</h3><p>Transformar os achados em recomendações e prioridades de melhoria.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ofertas">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="label">Formatos de atendimento</div>
+          <h2>Comece pela conversa. Avance com foco.</h2>
+        </div>
+        <p>A conversa inicial ajuda a entender o contexto. Se houver aderência, uma sessão individual permite trabalhar um desafio específico com mais profundidade.</p>
+      </div>
+      <div class="offers">
+        <article class="offer">
+          <span class="type">Primeiro passo</span>
+          <h3>Conversa inicial</h3>
+          <div class="price">Gratuita <small>· 30 min</small></div>
+          <p>Uma conversa breve para apresentar seu contexto, esclarecer o que você procura e avaliar se uma sessão faz sentido.</p>
+          <ul><li>Alinhamento sobre o desafio</li><li>Definição de um possível próximo passo</li></ul>
+          <a class="button" href="https://calendly.com/nando-galldino/30min" target="_blank" rel="noopener noreferrer">Escolher horário no Calendly ↗</a>
+        </article>
+        <article class="offer featured">
+          <span class="type">Trabalho individual</span>
+          <h3>Sessão de orientação</h3>
+          <div class="price">R$ 750 <small>· 90 min</small></div>
+          <p>Uma sessão focada em um desafio profissional relacionado a TI, pré-vendas, comunicação de valor ou aplicação de IA.</p>
+          <ul><li>Preparação a partir do tema escolhido</li><li>90 minutos de trabalho individual</li><li>Recomendações e próximos passos</li></ul>
+          <a class="button secondary" href="#contato">Consultar sobre a sessão ↓</a>
+          <p class="pending">O link de agendamento específico para a sessão de 90 min será incluído quando o evento estiver configurado.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="sobre">
+    <div class="wrap about">
+      <div class="monogram" aria-label="Monograma Nando Galldino"><strong>NG</strong></div>
+      <div class="about-copy">
+        <div class="label">Sobre Nando</div>
+        <h2>Experiência em tecnologia, negócios e conversas complexas.</h2>
+        <p>Sou consultor de vendas e atuo na interseção entre arquitetura, pré-vendas e desenvolvimento de negócios. Minha experiência em empresas de tecnologia e serviços orienta um trabalho prático: entender o contexto, organizar a mensagem e ajudar especialistas a participar com mais impacto das decisões.</p>
+        <p>O método DEVP reúne essa perspectiva em um processo estruturado para investigar como o valor de uma solução é apresentado e percebido.</p>
+        <a class="button" href="#contato">Vamos conversar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="perguntas">
+    <div class="wrap faq">
+      <div>
+        <div class="label">Dúvidas frequentes</div>
+        <h2>Antes de agendar.</h2>
+        <p class="lead">Algumas respostas para ajudar você a decidir se este formato atende ao que está buscando.</p>
+      </div>
+      <div>
+        <details><summary>Para quem é a sessão de 90 minutos?</summary><p>Para profissionais de TI, pré-vendas e áreas próximas que queiram trabalhar um desafio concreto ligado à carreira, comunicação de valor, conversas com clientes ou aplicação de IA no trabalho.</p></details>
+        <details><summary>Preciso contratar o DEVP para fazer uma sessão?</summary><p>Não. A sessão de orientação pode tratar um tema específico. O DEVP é um método próprio para diagnosticar como o valor de soluções complexas é apresentado e percebido.</p></details>
+        <details><summary>O que devo levar para a conversa gratuita?</summary><p>Uma breve descrição do desafio que você quer discutir é suficiente. A conversa serve para entender o contexto e avaliar o próximo passo.</p></details>
+        <details><summary>A sessão de orientação garante um resultado específico?</summary><p>Não há garantia de resultado. A sessão é um trabalho de análise e orientação baseado nas informações e no contexto compartilhados pelo participante.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="contato">
+    <div class="wrap closing">
+      <div class="label">Próximo passo</div>
+      <h2>Traga um desafio real para a conversa.</h2>
+      <p class="lead">Agende 30 minutos sem custo para explicar seu contexto e entender se uma sessão individual ou o DEVP é o caminho adequado.</p>
+      <div class="actions">
+        <a class="button" href="https://calendly.com/nando-galldino/30min" target="_blank" rel="noopener noreferrer">Agendar conversa gratuita ↗</a>
+        <a class="button secondary" href="#inicio">Voltar ao início ↑</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <strong>NANDO GALLDINO</strong>
+      <span>Tecnologia · valor · decisão</span>
+      <span>© <span id="year">2026</span> Nando Galldino</span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <!-- Inserir aqui os links oficiais das redes sociais e o link do Calendly para o evento pago de 90 min. -->
+</body>
+</html>
